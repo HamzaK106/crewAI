@@ -24,6 +24,10 @@ load_dotenv(env_test_path, override=True)
 load_dotenv(override=True)
 
 
+# Get the base directory of the project
+base_dir = Path(__file__).parent
+    
+
 def _patched_make_vcr_request(httpx_request: Any, **kwargs: Any) -> Any:
     """Patched version of VCR's _make_vcr_request that handles binary content.
 
